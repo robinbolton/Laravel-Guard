@@ -1,4 +1,6 @@
-# Instant Compilation, Concatenation, and Minification in Laravel 4 (Beta)
+> Please note that this project is no longer maintained. Please fork, if you'd like to improve it.
+
+# Instant Compilation, Concatenation, and Minification in Laravel 4 (Alpha)
 
 [Prefer a video overview?](https://dl.dropbox.com/u/774859/GitHub-Repos/laravel-guard-intro.mp4)
 
