@@ -148,7 +148,7 @@ And:
 Will create:
 
 ```html
-<script src="/js/scripts.min.js"></script>
+<script type="text/javascript" src="/js/scripts.min.js"></script>
 ```
 
 You can optionally pass an argument to either of these functions, which should reference a file name that is relative to what you have set under `js_path` or `css_path` in the configuration file. For example, to pull in the stylesheet, `public/css/normalize.css`, and assuming that `css_path` is set to `public/css`, simply do:
@@ -157,13 +157,26 @@ You can optionally pass an argument to either of these functions, which should r
 {{ stylesheet('normalize.css') }}
 ```
 
+
+
 This will produce:
 
 ```html
 <link rel="stylesheet" href="/css/normalize.css">
 ```
 
+Note that you can also specify a `cache` argument in script() helper which will append a random number to js_path to prevent caching javascript file in browser.This is very usefull when using jsonp technique.
+For example :
 
+```php
+{{ script('script.js', false) }}
+```
+
+Will produce something like:
+
+```html
+<script type="text/javascript" src="/js/script.js?49081"></script>
+```
 
 ## Workflow
 

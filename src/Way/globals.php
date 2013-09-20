@@ -31,7 +31,7 @@ if ( ! function_exists('script'))
 	 * @param  string $path
 	 * @return string
 	 */
-	function script($cache=true, $path = 'scripts.min.js')
+	function script($path = 'scripts.min.js', $cache=false)
 	{
 		$publicDirName = basename(public_path());
 
@@ -43,6 +43,6 @@ if ( ! function_exists('script'))
 			$path .= '?' . (string) $randNumber;
 		}
 
-		return "<script type='text/javascript' src='$path'></script>";
+		return "<script type='text/javascript' src='{$path}'></script>";
 	}
 }
