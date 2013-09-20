@@ -14,7 +14,7 @@ if ( ! function_exists('stylesheet'))
 	{
 		$publicDirName = basename(public_path());
 
-		$path = \Config::get('guard-laravel::guard.css_path') . "/$path";
+		$path = \Config::get('guard-laravel::guard.css_path') . "/{$path}";
 		$path = str_replace($publicDirName, '', $path);
 
 		return "<link rel='stylesheet' href='{$path}'>";
@@ -31,13 +31,18 @@ if ( ! function_exists('script'))
 	 * @param  string $path
 	 * @return string
 	 */
-	function script($path = 'scripts.min.js')
+	function script($cache=true, $path = 'scripts.min.js')
 	{
 		$publicDirName = basename(public_path());
 
-		$path = \Config::get('guard-laravel::guard.js_path') . "/$path";
+		$path = \Config::get('guard-laravel::guard.js_path') . "/{$path}";
 		$path = str_replace($publicDirName, '', $path);
 
-		return "<script src='$path'></script>";
+		if(! $cache) {
+			$randNumber = rand(100, 100000);
+			$path .= '?' . (string) $randNumber;
+		}
+
+		return "<script type='text/javascript' src='$path'></script>";
 	}
 }
