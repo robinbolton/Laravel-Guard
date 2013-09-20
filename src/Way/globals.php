@@ -31,7 +31,7 @@ if ( ! function_exists('script'))
 	 * @param  string $path
 	 * @return string
 	 */
-	function script($path = 'scripts.min.js', $cache=false)
+	function script($path = 'scripts.min.js', $cache=true)
 	{
 		$publicDirName = basename(public_path());
 
