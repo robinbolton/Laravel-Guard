@@ -38,6 +38,7 @@ class GuardRefreshCommand extends Command {
 		'coffeescript',
 		'sass',
 		'less',
+		'stylus',
 		'uglify',
 		'refresher'
 	);

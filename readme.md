@@ -6,7 +6,7 @@
 
 This plugin improves asset management in Laravel, by:
 
-- Compiling Sass or Less files automatically
+- Compiling Sass, Less or Stylus files automatically
 - Compiling CoffeeScript
 - Automatically running tests on save
 - Concatenating and minifying JavaScript and CSS (if not using a preprocessor)
@@ -52,6 +52,7 @@ Unless you specify custom paths for these directories, Guard-Laravel will use se
 
 - **Sass**: app/assets/sass
 - **Less**: app/assets/less
+- **Stylus**: app/assets/stylus
 - **CoffeeScript**: app/assets/coffee
 - **JS**: public/js
 - **CSS**: public/css
@@ -67,7 +68,7 @@ You may now edit these options at `app/config/packages/way/guard-laravel/guard.p
 
 ## Sass/Less/CoffeeScript Compilation
 
-After you've generated a Guardfile with `php artisan guard:make` (which will also download any necessary dependencies), you'll see a new `app/assets` directory. This is where your Sass/Less/CoffeeScript files will be stored. Try creating a new file, `app/assets/sass/buttons.sass`, and add:
+After you've generated a Guardfile with `php artisan guard:make` (which will also download any necessary dependencies), you'll see a new `app/assets` directory. This is where your Sass/Less/Stylus/CoffeeScript files will be stored. Try creating a new file, `app/assets/sass/buttons.sass`, and add:
 
 ```css
 .button

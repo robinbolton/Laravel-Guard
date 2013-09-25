@@ -42,7 +42,7 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| Here, you'll specify where you want your assets directory to go.
-	| This will be the base directory, where sass, less, and coffee directories
+	| This will be the base directory, where sass, less, stylus, and coffee directories
 	| will be inserted.
 	|
 	*/

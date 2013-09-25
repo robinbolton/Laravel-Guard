@@ -159,12 +159,12 @@ class GuardMakeCommand extends Command {
 	{
 		if ($this->confirm('Do you require CSS preprocessing? [yes|no]', false))
 		{
-			$preprocessor = strtolower($this->ask('Which CSS preprocessor do you want? [sass|less]'));
+			$preprocessor = strtolower($this->ask('Which CSS preprocessor do you want? [sass|less|stylus]'));
 
-			while (! $preprocessor or ! in_array($preprocessor, array('sass', 'less')))
+			while (! $preprocessor or ! in_array($preprocessor, array('sass', 'less', 'stylus')))
 			{
 				// ask again
-				$preprocessor = $this->ask('I did not recognize that preprocessor. Please try again. [sass|less]');
+				$preprocessor = $this->ask('I did not recognize that preprocessor. Please try again. [sass|less|stylus]');
 			}
 
 			return $preprocessor;

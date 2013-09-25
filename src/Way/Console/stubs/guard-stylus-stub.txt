@@ -1,0 +1,1 @@
+guard :stylus, :input => '{{assetsPath}}/stylus', :output => '{{cssPath}}'{{options}}
