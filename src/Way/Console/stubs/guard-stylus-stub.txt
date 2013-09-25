@@ -1,1 +1,3 @@
-guard :stylus, :input => '{{assetsPath}}/stylus', :output => '{{cssPath}}'{{options}}
+guard "stylus", :output => "{{cssPath}}"{{options}} do
+  watch(%r{^{{assetsPath}}/stylus/(.+\.styl)$})
+end
