@@ -92,11 +92,13 @@ return array(
 	|
 	*/
 	'guard_options' => array(
-		/*
-		'sass' => array(
+		/*'sass' => array(
 			'line_numbers' => true,
 			'style'		   => ':compressed'
-		)
-		*/
+		),*/
+		/*'stylus' => array(
+			'all_on_start' => true,
+			'all_on_change' => true,
+		),*/
 	)
 );
